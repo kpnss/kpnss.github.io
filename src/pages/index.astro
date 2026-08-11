@@ -40,12 +40,18 @@ import Layout from '../layouts/Layout.astro';
           <a href="https://github.com/kpnss" target="_blank" rel="noopener">GitHub</a>
           <a href="https://linkedin.com/in/michele-capponi" target="_blank" rel="noopener">LinkedIn</a>
           <a href="mailto:michelecapponiposta@gmail.com">Email</a>
-          <a href="/cv-michele-capponi.pdf" download class="cv-button">Download CV</a>
+          <!-- <a href="/cv-michele-capponi.pdf" download class="cv-button">Download CV</a> -->
         </div>
       </div>
+      <!-- Hero photo -->
+      <!--
       <div class="hero-photo-wrap">
         <div class="hero-photo-ring"></div>
         <img class="hero-photo" src="public/profile.jpg" alt="Portrait of Michele Capponi" />
+      </div>
+     -->
+      <div class="cv-logo">
+        <a href="/cv-michele-capponi.pdf" download class="cv-logo">Download CV</a>
       </div>
       <div class="scroll-cue" aria-hidden="true" style="transform: translateY(-80px);"><span></span></div>
     </section>
@@ -598,6 +604,28 @@ import Layout from '../layouts/Layout.astro';
     background: transparent !important;
     color: var(--green-bright) !important;
   }
+  /* CV LOGO momentaneo per non mettere foto mie*/
+  .cv-logo{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.4rem 1.4rem;
+    border: 1px solid var(--green-bright) !important;
+    border-radius: 999px;
+    background: var(--green-bright) !important;
+    color: var(--bg) !important;
+    border-color: var(--green-bright) !important;
+    font-weight: 600;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.4rem;
+    text-decoration: none;
+    line-height: 1;
+  }
+
+  .cv-logo:hover {
+    background: transparent !important;
+    color: var(--green-bright) !important;
+  }
 
   .hero-photo-wrap { position:relative; width:200px; height:200px; flex-shrink:0; }
   .hero-photo-ring {
@@ -758,6 +786,7 @@ import Layout from '../layouts/Layout.astro';
     .hero { flex-direction:column-reverse; text-align:center; min-height:auto; padding-top:2rem; }
     .hero-photo-wrap { width:140px; height:140px; }
     .links a { margin:0 0.3rem 0.6rem; }
+    .cv-logo { margin:0 0.3rem 0.6rem; }
     .about { flex-direction:column; text-align:center; }
     .about-carousel { width: 100%; max-width: 340px; height: 240px; }
     .track-col { width:40px; }
