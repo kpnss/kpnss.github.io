@@ -52,7 +52,7 @@ import Layout from '../layouts/Layout.astro';
 
     <!-- ABOUT -->
     <section class="section about reveal">
-      <div class="about-photo" id="aboutCarousel">
+      <div class="carousel about-carousel" id="aboutCarousel">
         <div class="carousel-track">
           <img src="/cansat_1.JPG" alt="SASA satellite" class="carousel-slide active" />
           <img src="/cansat_2.JPG" alt="SASA satellite" class="carousel-slide" />
@@ -681,6 +681,12 @@ import Layout from '../layouts/Layout.astro';
   .personal-item p { color:var(--text-muted); font-size:0.92rem; margin:0; }
 
   /* CAROUSEL — shared by About (small, no arrows) and Personal (larger, with arrows) */
+  .about-carousel {
+  width: 220px;
+  height: 260px;
+  flex-shrink: 0;
+  }
+
   .carousel {
     position: relative;
     flex-shrink: 0;
@@ -753,7 +759,7 @@ import Layout from '../layouts/Layout.astro';
     .hero-photo-wrap { width:140px; height:140px; }
     .links a { margin:0 0.3rem 0.6rem; }
     .about { flex-direction:column; text-align:center; }
-    .about-photo { width:160px; height:190px; }
+    .about-carousel { width: 100%; max-width: 340px; height: 240px; }
     .track-col { width:40px; }
     .personal { flex-direction: column; }
     .carousel { width: 100%; max-width: 340px; height: 340px; }
